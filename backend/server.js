@@ -31,17 +31,20 @@
 require("dotenv").config();
 
 const express = require("express");
-const cors = require("cors");
 
 const factCheckRoutes = require("./routes/factCheckRoutes");
 
 const app = express();
 
+const cors = require("cors");
+
 app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://ai-fact-checking-7nzowrbug-asan-alis-projects.vercel.app"
-    ]
+  origin: [
+    "http://localhost:5173",
+    "https://ai-fact-checking-six.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.use(express.json());
