@@ -253,7 +253,7 @@ function App() {
       console.log("Sending claim:", claim);
 
       const response = await fetch(
-        "http://localhost:5000/api/fact-check",
+        "https://ai-fact-checking.onrender.com/api/fact-check",
         {
           method: "POST",
 
